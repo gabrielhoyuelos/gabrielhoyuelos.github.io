@@ -35,11 +35,12 @@ a:focus-visible { outline: 2px solid #0645ad; outline-offset: 4px; border-radius
   section { break-inside: avoid; }
 }
 
+.profile { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; align-items: start; }
 .profile nav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 24px; }
 .profile a { overflow-wrap: anywhere; }
-/* Show a wider 400 x 455 crop of the original 900 x 1600 photo, starting at (500, 680). */
-.portrait { position: relative; width: 240px; max-width: 100%; aspect-ratio: 400 / 455; margin-bottom: 20px; overflow: hidden; }
-.portrait img { position: absolute; width: 225%; max-width: none; height: 351.648352%; object-fit: cover; left: -125%; top: -149.450549%; }
+/* Frame the original photograph around the face and upper body without retouching. */
+.portrait { position: relative; width: 220px; aspect-ratio: 350 / 455; overflow: hidden; }
+.portrait img { position: absolute; width: 257.142857%; max-width: none; height: auto; left: -157.142857%; top: -149.450549%; }
 .cv > nav { margin-bottom: 36px; }
 .cv-name { font-size: 1.25rem; }
 .updated { color: #555; font-size: .9rem; }
@@ -48,6 +49,7 @@ article + article { margin-top: 24px; }
 .events li + li { margin-top: 18px; }
 footer { margin-top: 40px; }
 @media (max-width: 650px) {
-  .portrait { width: 220px; }
+  .profile { grid-template-columns: 1fr; gap: 30px; }
+  .portrait { width: 200px; }
 }
 @media print { .cv > nav, .cv footer { display: none; } }
