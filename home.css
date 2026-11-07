@@ -8,7 +8,7 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
-main { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+main { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 a { color: #0a4f40; text-underline-offset: .2em; text-decoration-thickness: .08em; }
 a:hover { color: #9a6a16; }
 a:focus-visible { outline: 2px solid #0a4f40; outline-offset: 4px; }
