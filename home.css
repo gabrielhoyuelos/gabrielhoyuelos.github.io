@@ -8,7 +8,7 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
-main { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+main { max-width: 900px; margin: 0 auto; padding: 0 28px; }
 a { color: #0a4f40; text-underline-offset: .2em; text-decoration-thickness: .08em; }
 a:hover { color: #9a6a16; }
 a:focus-visible { outline: 2px solid #0a4f40; outline-offset: 4px; }
@@ -28,8 +28,8 @@ a { overflow-wrap: anywhere; }
 /* Preserve the original face-and-torso crop: 350 x 455 at (550, 680). */
 .portrait { position: relative; width: 100%; max-width: 200px; aspect-ratio: 350 / 455; overflow: hidden; }
 .portrait img { position: absolute; width: 257.142857%; max-width: none; height: auto; left: -157.142857%; top: -149.450549%; }
-.contact { border-top: 1px solid #d7ddd7; border-bottom: 1px solid #d7ddd7; padding: 3rem 0; margin-bottom: 3rem; }
-.contact p { margin-bottom: 0; }
+.about { border-top: 1px solid #d7ddd7; border-bottom: 1px solid #d7ddd7; padding: 3rem 0; margin-bottom: 3rem; }
+.about p { margin-bottom: 0; }
 @media (max-width: 760px) {
   .profile { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
   .portrait { width: 170px; }
