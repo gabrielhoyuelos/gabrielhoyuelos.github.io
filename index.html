@@ -8,7 +8,6 @@
   <meta name="description" content="Gabriel Hoyuelos, PhD student in Mathematics at IMECC, University of Campinas (UNICAMP).">
   <title>Gabriel Hoyuelos</title>
   <link rel="stylesheet" href="home.css?v=20261107-margins-plus12">
-  <meta name="google-site-verification" content="4Wr2xLD0dpylmJ2tUfRhv2UvzZL1YmcZlmnLReRVewo" />
   <link rel="canonical" href="https://gabrielhoyuelos.github.io/">
   <script type="application/ld+json">
 {
@@ -41,7 +40,12 @@
         </p>
         <p class="email">Email: <a href="mailto:g300702@dac.unicamp.br">g300702@dac.unicamp.br</a></p>
         <nav aria-label="Personal links">
-          <a href="cv/Gabriel_Hoyuelos_CV.pdf?v=2">Curriculum vitae</a>
+          <a id="cv-link" href="#">Curriculum vitae</a>
+            <script>
+              const pdf = "cv/Gabriel_Hoyuelos_CV.pdf";
+              document.getElementById("cv-link").href =
+                pdf + "?v=" + Date.now();
+            </script>
           <a href="https://github.com/gabrielhoyuelos">GitHub</a>
         </nav>
       </div>
