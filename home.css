@@ -8,8 +8,8 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
-/* 20% wider side margins than the previous 960px container with 24px padding. */
-main { margin: 0 max(28.8px, calc(60% - 547.2px)); padding: 0; }
+/* Side margins: original 960px container margins increased by 20%, then 12%. */
+main { margin: 0 max(32.256px, calc(67.2% - 612.864px)); padding: 0; }
 a { color: #0a4f40; text-underline-offset: .2em; text-decoration-thickness: .08em; }
 a:hover { color: #9a6a16; }
 a:focus-visible { outline: 2px solid #0a4f40; outline-offset: 4px; }
