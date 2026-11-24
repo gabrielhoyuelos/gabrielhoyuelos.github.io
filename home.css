@@ -34,16 +34,18 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
   position: relative;
   overflow: hidden;
   border-radius: .85rem;
-  min-height: 0;
+  width: 100%;
+  align-self: start;
+  aspect-ratio: 5 / 7;
 }
-/* Retain the face-and-torso crop of the original full-length photograph. */
+/* Anchor the wider crop on the subject at the right of the photograph. */
 .portrait img {
   position: absolute;
-  width: 257.142857%;
+  width: 215%;
   height: auto;
   right: 0;
   top: 0;
-  transform: translateY(-42.5%);
+  transform: translateY(-41%);
 }
 .profile-copy {
   display: flex;
@@ -70,7 +72,7 @@ h1 { font-size: 2em; line-height: 1; }
 @media screen and (max-width: 38rem) {
   .profile { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 1.75rem; }
   .profile-copy { min-height: auto; }
-  .portrait { width: 8rem; aspect-ratio: 3 / 4; }
+  .portrait { width: 8rem; aspect-ratio: 1; }
 }
 @media print {
   main { width: 100%; font-size: 12pt; }
