@@ -69,7 +69,7 @@ h1 { font-size: 2em; line-height: 1; }
 
 @media screen and (max-width: 38rem) {
   .profile { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 1.75rem; }
-  .portrait { width: 8rem; aspect-ratio: 1; }
+  .portrait { width: 10.75rem; aspect-ratio: 1; }
 }
 @media print {
   main { width: 100%; font-size: 12pt; }
