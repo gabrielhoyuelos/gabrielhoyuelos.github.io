@@ -1,3 +1,3 @@
 # Gabriel Hoyuelos
 
-My [academic website](https://gabrielhoyuelos.github.io/) and CV.
+This repository contains the source files for my [academic website](https://gabrielhoyuelos.github.io/), including my CV.
