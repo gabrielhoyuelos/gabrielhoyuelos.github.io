@@ -27,7 +27,7 @@ p { margin: 0 0 1rem; }
 .profile nav { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; }
 a { overflow-wrap: anywhere; }
 /* Preserve the original face-and-torso crop: 350 x 455 at (550, 680). */
-.portrait { position: relative; width: 100%; max-width: 200px; aspect-ratio: 350 / 455; overflow: hidden; }
+.portrait { position: relative; width: 100%; max-width: 200px; aspect-ratio: 350 / 455; border-radius: 12px; overflow: hidden; }
 .portrait img { position: absolute; width: 257.142857%; max-width: none; height: auto; left: -157.142857%; top: -149.450549%; }
 .about { border-top: 1px solid #d7ddd7; border-bottom: 1px solid #d7ddd7; padding: 2.25rem 0; margin-bottom: 2.25rem; }
 .about p { margin-bottom: 0; }
