@@ -10,7 +10,7 @@
 * { box-sizing: border-box; }
 body, h1, h2, p { margin: 0; }
 main {
-  width: min(calc(100% - 3.25rem), clamp(42.5rem, 51%, 61.25rem));
+  width: min(calc(100% - 3.25rem), 42.5rem);
   margin-inline: auto;
 }
 
@@ -26,9 +26,9 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 
 .profile {
   display: grid;
-  grid-template-columns: clamp(9.375rem, 13.7vw, 12rem) minmax(0, 1fr);
-  gap: clamp(1rem, 2vw, 1.6rem);
-  padding-block: clamp(1.75rem, 3vw, 2.75rem) 1.75rem;
+  grid-template-columns: 10.75rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding-block: 2.25rem 1.75rem;
 }
 .portrait {
   position: relative;
@@ -36,7 +36,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
   border-radius: .85rem;
   width: 100%;
   align-self: start;
-  aspect-ratio: 5 / 7;
+  aspect-ratio: 3 / 4;
 }
 /* Anchor the wider crop on the subject at the right of the photograph. */
 .portrait img {
@@ -51,8 +51,6 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  min-height: clamp(14rem, calc(9.5rem + 6.2vw), 14.875rem);
   line-height: 1.401;
   gap: .5rem;
 }
@@ -71,7 +69,6 @@ h1 { font-size: 2em; line-height: 1; }
 
 @media screen and (max-width: 38rem) {
   .profile { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 1.75rem; }
-  .profile-copy { min-height: auto; }
   .portrait { width: 8rem; aspect-ratio: 1; }
 }
 @media print {
