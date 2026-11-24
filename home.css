@@ -27,8 +27,6 @@ p { margin: 0 0 1rem; }
 .email a:hover { text-decoration: underline; }
 .profile nav { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; }
 a { overflow-wrap: anywhere; }
-.profile-contact { display: flex; flex-direction: column; gap: 8px; }
-.profile-contact .email { margin: 0; }
 /* Preserve the original face-and-torso crop with rounded corners. */
 .portrait { position: relative; width: 100%; max-width: 200px; aspect-ratio: 350 / 430; align-self: start; border-radius: 12px; overflow: hidden; }
 .portrait img { position: absolute; width: 257.142857%; max-width: none; height: auto; left: -157.142857%; top: 0; transform: translateY(-42.5%); }
