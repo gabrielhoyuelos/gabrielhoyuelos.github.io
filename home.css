@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --link: #36c;
+  --link: #0a4f40;
   font-family: Georgia, "Times New Roman", serif;
   color: #111;
   background: #fff;
@@ -21,13 +21,7 @@ a {
   text-underline-offset: .16em;
   text-decoration-thickness: .07em;
 }
-@media screen {
-  a:visited { color: #6a60b0; }
-  a:hover { color: #3056a9; text-decoration-line: underline; }
-  a:visited:hover { color: #534fa3; }
-  a:active { color: #233566; }
-  a:visited:active { color: #353262; }
-}
+a:hover { color: #9a6a16; text-decoration-line: underline; }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 
 .profile {
