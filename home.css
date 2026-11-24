@@ -10,7 +10,7 @@
 * { box-sizing: border-box; }
 body, h1, h2, p { margin: 0; }
 main {
-  width: min(calc(100% - 2.65rem), clamp(44.8rem, 53.85%, 64.55rem));
+  width: min(calc(100% - 3rem), clamp(43.5rem, 52%, 62.5rem));
   margin-inline: auto;
 }
 
@@ -54,6 +54,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
   line-height: 1.401;
   gap: .575rem;
 }
+.role { position: relative; top: -.25rem; }
 h1 { font-size: 2em; line-height: 1; }
 .profile-links {
   display: grid;
