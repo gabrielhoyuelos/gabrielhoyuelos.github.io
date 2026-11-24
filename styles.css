@@ -38,6 +38,14 @@ a:focus-visible { outline: 2px solid #0645ad; outline-offset: 4px; border-radius
 .profile { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; align-items: start; }
 .profile nav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 24px; }
 .profile a { overflow-wrap: anywhere; }
+.profile-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.profile-contact .email {
+    margin: 0;
+}
 /* Frame the original photograph around the face and upper body without retouching. */
 .portrait { position: relative; width: 220px; aspect-ratio: 350 / 455; overflow: hidden; }
 .portrait img { position: absolute; width: 257.142857%; max-width: none; height: auto; left: -157.142857%; top: -149.450549%; }
