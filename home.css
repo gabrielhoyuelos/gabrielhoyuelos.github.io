@@ -1,42 +1,80 @@
 :root {
   color-scheme: light;
+  --link: #0a4f40;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #17211b;
+  color: #111;
   background: #fff;
+  line-height: 1.55;
 }
+
 * { box-sizing: border-box; }
-body { margin: 0; }
-/* Side margins: original 960px container margins increased by 20%, then 12%. */
-main { margin: 0 max(32.256px, calc(67.2% - 612.864px)); padding: 0; }
-a { color: #0a4f40; text-underline-offset: .2em; text-decoration-thickness: .08em; }
+body, h1, h2, p { margin: 0; }
+main {
+  width: min(calc(100% - 3rem), 61rem);
+  margin-inline: auto;
+  font-size: clamp(1rem, 1.35vw, 1.3125rem);
+}
+
+a {
+  color: var(--link);
+  overflow-wrap: anywhere;
+  text-underline-offset: .16em;
+  text-decoration-thickness: .07em;
+}
 a:hover { color: #9a6a16; }
-a:focus-visible { outline: 2px solid #0a4f40; outline-offset: 4px; }
-h1 { margin: 0 0 .35rem; font-size: 2rem; line-height: 1.05; }
-h2 { margin: 0 0 .45rem; font-size: 1.25rem; line-height: 1.3; }
-p { margin: 0 0 1rem; }
-.profile { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 2rem; align-items: stretch; padding: 1.75rem 0 1.5rem; }
-.profile-copy { min-width: 0; display: flex; flex-direction: column; }
-.profile-contact { flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: left; padding: .5rem 0; gap: 4px; }
-.role { color: #66736b; font-size: 1.02rem; line-height: 1.4; margin-bottom: .5rem; }
-.role a { color: inherit; text-decoration: none; }
-.role a:hover { text-decoration: underline; }
-.email a { color: inherit; text-decoration: none; }
-.email a:hover { text-decoration: underline; }
-.profile nav { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; }
-a { overflow-wrap: anywhere; }
-/* Preserve the original face-and-torso crop with rounded corners. */
-.portrait { position: relative; width: 100%; max-width: 200px; aspect-ratio: 350 / 430; align-self: start; border-radius: 12px; overflow: hidden; }
-.portrait img { position: absolute; width: 257.142857%; max-width: none; height: auto; left: -157.142857%; top: 0; transform: translateY(-42.5%); }
-.about { border-top: 1px solid #d7ddd7; border-bottom: 1px solid #d7ddd7; padding: 2.25rem 0; margin-bottom: 2.25rem; }
-.about p { margin-bottom: 0; }
-@media (max-width: 760px) {
-  .profile { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
-  .portrait { width: 170px; aspect-ratio: 350 / 430; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+
+.profile {
+  display: grid;
+  grid-template-columns: 25% minmax(0, 1fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+  padding-block: clamp(2rem, 4vw, 3.75rem) 2.4rem;
+}
+.portrait {
+  position: relative;
+  overflow: hidden;
+  border-radius: .85rem;
+  min-height: 0;
+}
+/* Retain the face-and-torso crop of the original full-length photograph. */
+.portrait img {
+  position: absolute;
+  width: 257.142857%;
+  height: auto;
+  right: 0;
+  top: 0;
+  transform: translateY(-42.5%);
+}
+.profile-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: clamp(15rem, 32vw, 20.15rem);
+  gap: .45rem;
+}
+h1 { font-size: 2em; line-height: 1; }
+.role { line-height: 1.45; }
+:is(.role, .email) a { color: inherit; text-decoration: none; }
+:is(.role, .email) a:hover { text-decoration: underline; }
+.profile-links {
+  display: grid;
+  justify-items: start;
+  gap: .5rem;
+}
+.profile-links a { display: inline-flex; align-items: center; gap: .65em; }
+.profile-links svg { width: 1.25em; height: 1.25em; fill: currentColor; flex: none; }
+
+.about { border-block: 1px solid #d7ddd7; padding-block: 2rem 2.8rem; }
+h2 { margin-bottom: .4em; font-size: 1.35em; line-height: 1.3; }
+
+@media screen and (max-width: 38rem) {
+  main { width: calc(100% - 2.5rem); }
+  .profile { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 1.75rem; }
+  .portrait { width: 10rem; aspect-ratio: 3 / 4; }
+  .profile-copy { min-height: auto; }
 }
 @media print {
-  main { margin: 0; padding: 0; }
+  main { width: 100%; font-size: 12pt; }
   a { color: inherit; }
-  .profile { grid-template-columns: 170px minmax(0, 1fr); }
 }
